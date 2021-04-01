@@ -13,6 +13,6 @@
     "stack-name"    : "AuthServer-PROD",
     "template"      : "serverless.template",
     "template-parameters" : "\"ShouldCreateBucket\"=\"false\";\"BucketName\"=\"scooteraws-lambda-repository\";\"FunctionName\"=\"AuthServer-PROD\";\"EnvironmentName\"=\"PROD\";\"BillingEnvironment\"=\"Dev\"",
-    "profile"             : "scooteraws",
+    "profile"             : "default",
     "s3-bucket"           : "scooteraws-lambda-repository"
 }

@@ -13,6 +13,16 @@ namespace AuthServer.Service.Identity
                 {
                     ClientId = "oauthClient",
                     ClientName = "Example client application using client credentials",
+                    AccessTokenType = AccessTokenType.Jwt,
+                    AllowedGrantTypes = GrantTypes.ClientCredentials,
+                    ClientSecrets = new List<Secret> {new Secret("SuperSecretPassword".Sha256())}, // change me!
+                    AllowedScopes = new List<string> {"api1.read"}
+                },
+                new Client
+                {
+                    ClientId = "scooterClient",
+                    ClientName = "Example client application using client credentials",
+                    AccessTokenType = AccessTokenType.Reference,
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     ClientSecrets = new List<Secret> {new Secret("SuperSecretPassword".Sha256())}, // change me!
                     AllowedScopes = new List<string> {"api1.read","api1.write"}
